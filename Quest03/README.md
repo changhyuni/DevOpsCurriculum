@@ -28,7 +28,7 @@
 
 * 우리가 브라우저의 주소 창에 `www.knowre.com` 을 쳤을 때, 어떤 과정을 통해 노리의 서버 주소를 알게 되나요?
 
-먼저, `www.knowre.com`을 맵핑하고 있는 IP주소로 변환하는 작업을 해야합니다. 가장먼저, 브루아저는 해당 도메인이 브라우저 캐시에 들어있는지 확인합니다. `(chrome://net-internals/#dns)` 만약 브라우저 캐시에서 찾지 못하면, OS에 저장된 DNS Cache를 확인합니다. `(linux : /etc/hosts)` 여기에도 해당주소가 없다면 Router DNS Server에서 직접 조회합니다. `(linux : /etc/resolv.conf)`에도 없다면, DNS Query를 시작하게 됩니다. 먼저, root domain서버 com서버, 그리고 해당 아이피가 있는 네임서버에서 IP를 가져오게 됩니다. 이제, Server의 IP주소로 TCP Socket을 열어 Server와 통신 준비를 진행합니다. 여기서 `3-way-handshark`를 통해 서버와 클라이언트와 `ESTABLISHED(성립)`가 되고 해당 `TCP Socket`을 통해서 HTTP요청을 보내고 요청을 받은 서버는 요청에 맞게 해당 페이지를 보여줍니다. 
+먼저, `www.knowre.com`을 맵핑하고 있는 IP주소로 변환하는 작업을 해야합니다. 가장먼저, 브루아저는 해당 도메인이 브라우저 캐시에 들어있는지 확인합니다. `(chrome://net-internals/#dns)` 만약 브라우저 캐시에서 찾지 못하면, OS에 저장된 DNS Cache를 확인합니다. `(linux : /etc/hosts)` 여기에도 해당주소가 없다면 Router DNS Server에서 직접 조회합니다. `(linux : /etc/resolv.conf)`에도 없다면, DNS Query를 시작하게 됩니다. 먼저, root domain서버 com서버, 그리고 해당 아이피가 있는 네임서버에서 IP를 가져오게 됩니다. 이제, Server의 IP주소로 TCP Socket을 열어 Server와 통신 준비를 진행합니다. 여기서 `3-way-handshark`를 통해 서버와 클라이언트와 `ESTABLISHED(성립)`가 되고 해당 `TCP Socket`을 통해서 HTTP요청을 보내고 요청을 받은 서버는 요청에 맞게 해당 페이지를 보여줍니다. TCP/IP 관점으로 바라보게 된다면, `www.knowre.com`를 주소창에 입력 하면 어플리케이션 레이어에서 전송계층으로 데이터를 전달하고, 전송계층에선 HTTP를 메세지를 패킷으로 분해 후 분해된 데이터의 일련번호를 부여 (TCP Header에서 Sequnece Number) 인터넷 계층에서 라우터를 통해 상대가 어디있는지 찾아내고, 전송계층에서 도착한 패킷을 일련번호를 보고 다시 조립하여 어플리케이션 레이어로 전달하면 전달 받은 데이터를 서버에 보내게 됩니다. 
 
 ## Quest
 * tracert(Windows가 아닌 경우 traceroute) 명령을 통해 `www.google.com` 까지 가는 경로를 찾아 보세요.
