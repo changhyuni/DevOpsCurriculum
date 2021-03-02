@@ -26,13 +26,16 @@
 
 * 도커 컨테이너에서 런타임에 환경변수를 주입하려면 어떻게 해야 할까요?
 
-`docker run --name mysqldb \      
+docker run --name mysqldb \      
            -e MYSQL_ROOT_PASSWORD=rootpw \      
-           -p 33060:3306 -d mysql:5.7  
+           -p 33060:3306 -d mysql:5.7`    
 
 Dockerfile에서 ENV를 사용하게 되면, RUN,CMD명령에서 초기 환경변수를 설정할 수 있고, 예시를 보면 컨테이너를 실행할 때 -e 옵션으로 mysql 패스워드 등을 변수로 사용할 수 있습니다.  
 
 * 도커 컨테이너의 stdout 로그를 보려면 어떻게 해야 할까요?
+
+도커 컨테이너에서 발생하는 로그(stdin, stdout, stderr) 표준 입력들을 json file로 저장할 수 있으며, 다른 서버에 로그 파일을 저장할 수도 있습니다. 도커에서는 로깅 드라이버를 사용하여, 여러가지 형태의 로그를 컨트롤 할 수 있습니다. 기본적인 json-file과 journald등을 사용하면 docker log 명령을 통해 실시간으로 기본적인 로그를을 확인할 수 있습니다.  별도의 로깅 드라이버를 지정하지 않는다면 json-file 로깅 드라이버를 사용합니다. 로그를 json파일 형식으로 저장합니다. 컨테이너 내부 출력이 많다면 json 파일의 크기가 계속해서 커지고, 별도 설정을 하지 않았다면 호스트의 남은 저장공간을 계속해서 사용하게 되니 주의하여야 합니다. --log-opt 옵션으로 로그파일의 최대 크기와 개수를 지정할 수 있습니다. 로그가 저장되는 위치는 기본적으로 /var/lib/docker/containers/[container-id]/[container-id]-json.log 입니다. 
+
 * 실행중인 도커 컨테이너에 들어가 bash 등의 쉘을 실행하고 로그 등을 보려면 어떻게 해야 할까요?
 
 ## Quest
