@@ -26,7 +26,7 @@
 
 * 도커 컨테이너에서 런타임에 환경변수를 주입하려면 어떻게 해야 할까요?
 
-docker run --name mysqldb \      
+`docker run --name mysqldb \      
            -e MYSQL_ROOT_PASSWORD=rootpw \      
            -p 33060:3306 -d mysql:5.7`    
 
