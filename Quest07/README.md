@@ -31,7 +31,7 @@ HTTP 및 HTTPS 트래픽을 사용하는 웹 애플리케이션을 위한 유연
 
 * AWS의 여러 리전(서울, 도쿄 등)으로 로드밸런싱을 하는 것도 가능할까요?
 
-elb는 리전에 국한되어서 리저널하게 트래픽을 라우팅할 수 없습니다. 하지만, aws에서는 route53을 통해 gslb를 구성하거나 global acceleartor를 사용할 수 있습니다. 예시로, gslb.knowre.com 라는 네임서버를 등록하고 www에대해 route53장비로 위임(cname)하게 되면 각 리전에 결처서 사용할 수 있습니다. 
+elb는 리전에 국한되어서 리저널하게 트래픽을 라우팅할 수 없습니다. 하지만, aws에서는 route53을 통해 gslb를 구성하거나 global acceleartor를 사용할 수 있습니다. 예시로, gslb.knowre.com 라는 네임서버를 등록하고 www에대해 route53장비로 위임(cname)하게 되면 각 리전에 결처서 사용할 수 있습니다. 또한, global accelerator를 사용할 수도 있습니다. 
 
 
 ## Quest
