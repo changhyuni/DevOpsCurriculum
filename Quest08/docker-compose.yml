@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: bhs9610/knowre-quest:quest06
+    ports:
+      - "8080:8080"
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: knowre
+        awslogs-region: ap-northeast-2
+        awslogs-stream-prefix: web
