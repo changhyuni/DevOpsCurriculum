@@ -34,7 +34,7 @@ cache-control를 사용합니다. 헤더 내용을보면 Cache-Control: 에 지�
 먼저, cors가 등장하게된 이유는 Same-Origin Policy (동일 출처 정책) 때문입니다. Same-Origin Policy는 어떤 출처에서 불러온 문서나 스크립트가 다른 출처에서 가져온 리소스와 상호작용 하는것을 제한하게 되는데, 클라이언트와 서버의 도메인을 따로 유지하는 경우가 자주 생기게 되는데 이때, 앱과 외부 API의 Origin이 다르기 때문에 Same-Origin Policy에 의해 자원공유를 할 수 없는 상황이 생기게됩니다. 이때, HTTP Header를통해 각 Origin간에 자원을 공유 할 수있게 하는것이 cors가 생겨난 배경이라고 볼 수 있습니다. 
 노리에서 제공하는 수학 플랫폼(ai) RESTful API 서버에서 '수학 문제 답' data를 요청하고 받아와 '수학 문제 답' 정보 UI를 보여주는 Web App을 개발한다고 가정하겠습니다.
 노리 API의 도메인이 www.knwore.com이라고 가정하고, AWS EC2(Route53)에서 호스팅되고 있는 우리의 Client페이지의 도메인은 answer.math.com 이라고 가정하겠습니다. 이제 노리에 API에 '수학 문제 답' data를 요청해야합니다. 하지만, 배포되고 있는 Client페이지와 노리 API가 다른 도메인을 가지고 있습니다. Client입장에서 도메인이 다른 Web Server에 data, 즉 '수학 문제 답' 이라는 리소스를 요청하는것이 바로 교차 출처 요청인 Cross Origin Request라고 합니다.  
-EC2에는 보안그룹과 각 프레임워크에서 지원하는 cors라이브러리를 사용해서 구현할 수 있습니다. HTTP Reponse Header에서 Access-Control-Allow-Origin 를 통해 설정할 수 있습니다.  
+EC2에는 각 프레임워크에서 지원하는 cors라이브러리를 사용해서 구현할 수 있습니다. HTTP Reponse Header에서 Access-Control-Allow-Origin 를 통해 설정할 수 있습니다.  
 S3에서는 Permisson 카테고리에서 cors를 설정 할 수 있습니다. json으로만 구현이 가능하며 (xml에서 변경됨), 규칙은 최대 100개까지 구현이 가능합니다.  
   
 <동작과정>  
