@@ -1,0 +1,14 @@
+{
+    "name": "knowre-quest09",
+    "version": "1.0.0",
+    "description": "Node.js on Docker",
+    "author": "chang hyun <bhs9610@naver.com>",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1",
+      "cors": "2.8.5" 
+    }
+  }

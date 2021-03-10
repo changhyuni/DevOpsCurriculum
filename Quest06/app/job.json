@@ -1,0 +1,23 @@
+{
+    "family": "ecs-test", 
+    "networkMode": "awsvpc", 
+    "containerDefinitions": [
+        {
+            "name": "knowre-quest", 
+            "image": "bhs9610/knowre-quest:quest09", 
+            "portMappings": [
+                {
+                    "containerPort": 3001, 
+                    "hostPort": 3001, 
+                    "protocol": "tcp"
+                }
+            ], 
+            "essential": true
+        }
+    ], 
+    "requiresCompatibilities": [
+        "FARGATE"
+    ], 
+    "cpu": "256", 
+    "memory": "512"
+}
