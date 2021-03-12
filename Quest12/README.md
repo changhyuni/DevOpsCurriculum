@@ -34,10 +34,10 @@ SOA : DNS영역의 주 DNS 서버를 정의하여 일련번호를 통해 영역�
 * Route53의 Alias 기능이란 무엇인가요?  
 A레코드만 사용할 수 있는 기능입니다. IP주소 대신 AWS 리소스인 S3, Cloudfront, ELB를 설정할 수 있습니다.  
 -> 예시  
-name.example.com.	CNAME(ALIAS)	d12345xx.cloudfront.net.  
+`name.example.com.	CNAME(ALIAS)	d12345xx.cloudfront.net.  
 cname.example.com.	CNAME(ALIAS)	dualstack.elb123.us-east 1.elb.amazonaws.com.  
 cname.example.com.	CNAME(ALIAS)	s3-website-us-west-2.amazonaws.com.  
-cname.example.com.	CNAME(ALIAS)	ebs1234.us-east-1.elasticbeanstalk.com.  
+cname.example.com.	CNAME(ALIAS)	ebs1234.us-east-1.elasticbeanstalk.com.`    
 
 * 대부분의 최신 브라우저에서는 HTTP 대신 HTTPS가 권장됩니다. 이유가 무엇일까요?
 * HTTPS와 TLS는 어떤 식으로 동작하나요? HTTPS는 어떤 역사를 가지고 있나요?
