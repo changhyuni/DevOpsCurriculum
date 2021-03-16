@@ -18,7 +18,7 @@ shoot() {
   result.innerText = "Good job";
 }
     componentDidMount() {
-      fetch('https://knowre-cloudfront-elb-60923550.ap-northeast-2.elb.amazonaws.com/api')
+      fetch('https://p08w7e4ogj.execute-api.ap-northeast-2.amazonaws.com/dev/api')
       .then(res=>res.json())
       .then(data=>this.setState({username:data.username}));
   }
