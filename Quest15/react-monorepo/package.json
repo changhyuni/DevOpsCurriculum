@@ -1,0 +1,21 @@
+{
+  "name": "react-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "express": "^4.17.1",
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "@foo/app": "file:packages/app",
+    "lambda": "file:packages/lambda",
+    "lint": "file:packages/lint",
+    "server": "file:packages/server"
+  }
+}

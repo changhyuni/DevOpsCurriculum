@@ -1,0 +1,30 @@
+{
+  "name": "@foo/lambda",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "changhyuni <bhs9610@naver.com>",
+  "homepage": "https://github.com/changhyuni/DevOpsCurriculum#readme",
+  "license": "ISC",
+  "main": "lib/lambda.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changhyuni/DevOpsCurriculum.git"
+  },
+  "scripts": {
+    "lint": "npx eslint lib",
+    "build": "npm install --production && rm -rf build && mkdir build && zip -r -q -x='*terraform*' -x='*.md' -x='LICENSE' -x='*build*' -x='*.DS_Store*' -x='*.git*' build/express-like-lambda-example.zip . && du -sh build"
+  },
+  "bugs": {
+    "url": "https://github.com/changhyuni/DevOpsCurriculum/issues"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
