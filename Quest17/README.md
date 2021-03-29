@@ -14,7 +14,9 @@
 * https://grafana.com/docs/grafana/latest/getting-started/getting-started/
 
 ## Checklist
-* 위 Topics의 리눅스 커맨드들은 어떤 커맨드인가요? 운영 중 어떤 상황에 쓸 수 있을까요?
+* 위 Topics의 리눅스 커맨드들은 어떤 커맨드인가요? 운영 중 어떤 상황에 쓸 수 있을까요?  
+  
+  해당 명령어들은 시스템의
 * Cloudwatch는 어떤 서비스인가요? 우리가 구축한 시스템 관련하여, Cloudwatch에서 제공하는 메트릭들 중 유용한 것은 어떤 것이 있을까요?
 * Grafana는 어떤 역할을 하는 툴인가요? Grafana 외에 비슷한 일을 하는 툴은 무엇이 있을까요?
 
