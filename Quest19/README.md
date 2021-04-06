@@ -19,7 +19,9 @@
 * https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html
 
 ## Checklist
-* 스트레스 테스트는 왜 하는 것일까요?
+* 스트레스 테스트는 왜 하는 것일까요?  
+  
+  서버에 장애가
 * 스트레스 테스트의 진행에는 어떤 방법론들이 있을까요?
 * AWS의 Auto Scaling은 어떤 서비스일까요? Fargate에서는 어떻게 적용할 수 있을까요?
 * Lambda의 동시 실행은 어떠한 개념일까요? 부하가 많은 서비스에서 이 지표를 어떻게 모니터링 해야 할까요?
