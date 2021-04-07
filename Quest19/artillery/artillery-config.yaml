@@ -1,0 +1,9 @@
+config:
+  target: "https://www.chkim.knowre.com"
+  phases:
+    - duration: 120
+      arrivalRate: 40
+scenarios:
+  - flow:
+    - get:
+        url: "/api"
